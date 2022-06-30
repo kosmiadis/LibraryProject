@@ -11,15 +11,52 @@ body {
   align-items: center;
 }
 
+body div.add-book-div {
+  border-radius: 15px;
+  border: 2px solid;
+  background-color: antiquewhite;
+  position: absolute;
+  top: 30%;
+  left: 41%;
+  z-index: 10;
+  width: 350px;
+  height: 350px;
+  display: none;
+  gap: 10px;
+}
+
+body div.add-book-div p {
+  font-size: 2em;
+}
+
+body div.add-book-div button#close-btn {
+  position: absolute;
+  left: 82%;
+  top: 12px;
+  background-color: #e7e7a2;
+  border: none;
+  font-size: 1em;
+  font-family: 'Lato';
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+body div.add-book-div button#close-btn:hover {
+  background-color: #eaea66;
+  cursor: pointer;
+}
+
 body div.bookshelf {
   margin-top: 30px;
   border: 20px solid #440c0c;
   width: 80%;
   height: 50vh;
-  background-image: repeating-linear-gradient(to left, antiquewhite 0px 80px, brown 80px 95.5px);
+  background-color: antiquewhite;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
 body div.bookshelf div.book {
@@ -30,16 +67,17 @@ body div.bookshelf div.book {
 }
 
 body div.bookshelf div.book span.title {
+  text-align: center;
   position: absolute;
   top: 200px;
-  left: -24px;
+  left: -25px;
   transform: rotate(90deg);
   font-size: 3em;
   color: white;
   font-family: 'Lato';
 }
 
-body button {
+body #add-book-btn {
   border: none;
   outline: none;
   appearance: none;
@@ -52,7 +90,7 @@ body button {
   transition: background-color 0.3s, color 0.3s;
 }
 
-body button:hover {
+body #add-book-btn:hover {
   background-color: antiquewhite;
   cursor: pointer;
   color: black;
