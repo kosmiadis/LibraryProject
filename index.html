@@ -1,31 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles/style.css">
         <title>Library</title>
-        <link rel="stylesheet" href="style.css">
     </head>
     
     <body>
 
-        <div class="add-book-div">
-            <button id="close-btn">Close</i></button>
-            <p>Add Book</p>
-            <input type="text" placeholder="Book Title">
-            <button id="add">Add Book</button>
+        <div class="library">
+
+            
+            <div class="book">
+                <div class="front">
+                    <p id="front-title">The Hobbit</p>
+                    <p id="front-author">by <span>J.R.R Tolkien</span></p>
+                </div>
+
+                <div class="back">
+                    <p>Book Info</p>
+                    <p id="title">Title: <span>The Hobbit</span></p>
+                    <p id="author">Author: <span>J.R.R Tolkien</span></p>
+                    <p id="pages">Pages: <span>295</span> </p>
+                    <p id="read">Read status: <span>read</span></p>
+                </div>
+            </div>
+            
+            
+
+            
+            
+            
         </div>
 
-        <button id="add-book-btn">Add Book</button>
-
-        <div class="bookshelf">
-            <div class="book"><span class="title">Greece</span></div>
+        <div class="book-info-input">
+            <div class="close">
+                <div class="line1 line"></div>
+                <div class="line2 line"></div>
+            </div>
+            <p>New Book</p>
+            <div class="input-container">
+                <input id='author-input' type="text" for="author" placeholder="Author...">
+                <input id='title-input' type="text" for="title" placeholder="Title...">
+                <input id='pages-input' type="number" for="pages" placeholder="Pages...">
+                <input id='read-status-input' type="text" for="read" placeholder="Read status...">
+            </div>
+            <button>Add Book</button>
         </div>
+
+        <svg viewBox="0 0 24 24" id="add-book-btn">
+            <path fill="currentColor" d="M17,13H13V17H11V13H7V11H11V7H13V11H17M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z" />
+        </svg>
+        
     </body>
 
     <script src="main.js"></script>
-
 </html>

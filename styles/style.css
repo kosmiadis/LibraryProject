@@ -1,0 +1,202 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #584242;
+}
+
+body div.library {
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+body div.library div.book {
+  display: block;
+  border: 2px solid;
+  border-radius: 3px;
+  width: 280px;
+  height: 400px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  position: relative;
+}
+
+body div.library div.book div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: antiquewhite;
+}
+
+body div.library div.book div.front {
+  text-align: center;
+}
+
+body div.library div.book div.front p:nth-child(1) {
+  margin-top: 100px;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+body div.library div.book div.front p:nth-child(2) {
+  font-size: 1.3em;
+  font-weight: 900;
+}
+
+body div.library div.book div.back {
+  text-align: center;
+  transform: translateZ(-1px) rotateY(180deg);
+}
+
+body div.library div.book div.back p:nth-child(1) {
+  font-style: italic;
+  text-decoration-line: underline;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+body div.library div.book div.back p:nth-child(2) {
+  font-size: 1.3em;
+  font-weight: 900;
+}
+
+body div.library div.book div.back p:nth-child(3) {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+body div.library div.book div.back p:nth-child(4) {
+  font-size: 0.9em;
+  font-weight: 900;
+}
+
+body div.library div.book div.back p:nth-child(5) {
+  font-size: 1em;
+  font-weight: 200;
+  text-decoration-line: underline;
+}
+
+body div.book-info-input {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  visibility: none;
+  opacity: 0;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  gap: 1em;
+  transition: all 0.8s;
+  background-color: lightgrey;
+  padding: 3em;
+  border-radius: 10px;
+}
+
+body div.book-info-input * {
+  font-family: 'Lato';
+}
+
+body div.book-info-input div.close {
+  position: absolute;
+  top: 8%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+}
+
+body div.book-info-input div.close .line {
+  position: absolute;
+  width: 25px;
+  border: 2px solid;
+  background-color: black;
+}
+
+body div.book-info-input div.close .line1 {
+  transform: rotate(45deg);
+}
+
+body div.book-info-input div.close .line2 {
+  transform: rotate(-45deg);
+}
+
+body div.book-info-input div.close:hover {
+  cursor: pointer;
+}
+
+body div.book-info-input p {
+  font-weight: 600;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+body div.book-info-input div.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2em;
+}
+
+body div.book-info-input div.input-container input {
+  font-size: 1.6em;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  appearance: none;
+  background-color: transparent;
+  border-bottom: 1px solid;
+  padding-bottom: 3px;
+}
+
+body div.book-info-input div.input-container input::-webkit-outer-spin-button, body div.book-info-input div.input-container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+body div.book-info-input button {
+  margin-top: 1em;
+  background-color: #b1adad;
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.4s;
+}
+
+body div.book-info-input button:hover {
+  cursor: pointer;
+  background-color: #827f7f;
+}
+
+body svg {
+  appearance: none;
+  border: none;
+  outline: none;
+  width: 60px;
+  transition: fill 0.2s;
+  position: sticky;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -50%);
+}
+
+body svg path {
+  fill: white;
+}
+
+body svg:hover {
+  cursor: pointer;
+}
+
+body svg:hover path {
+  fill: lightgrey;
+}
